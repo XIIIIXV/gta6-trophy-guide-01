@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Platinum Log — GTA VI trophy guide &amp; tracker</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="masthead">
+  <div>
+    <p class="kicker">GRAND THEFT AUTO VI &middot; PLAYSTATION 5 &middot; OFFLINE GUIDE</p>
+    <h1>Leonida Platinum Log</h1>
+    <p class="sub">Every one of the 55 trophies, with its official name, description and grade — a guide in our own words for each, every step cited, and a tracker that saves in your browser.</p>
+  </div>
+  <div class="progress-box" id="progressBox">
+    <div class="big" id="progressBig">0 / 55</div>
+    <div class="grades" id="progressGrades"></div>
+    <p class="progress-note">Platinum: ~200 hours &middot; difficulty 4/10 &middot; 1 playthrough &middot; 0 online trophies</p>
+  </div>
+</header>
+
+<div class="audit" id="audit">Loading audit…</div>
+
+<nav class="tabs" aria-label="Sections">
+  <button type="button" data-tab="tracker" class="active">Tracker</button>
+  <button type="button" data-tab="roadmap">Roadmap</button>
+  <button type="button" data-tab="missables">Missables</button>
+  <button type="button" data-tab="sources">Sources</button>
+</nav>
+
+<section id="view-tracker" class="view">
+  <div class="toolbar">
+    <label class="search">Search <input id="search" type="search" placeholder="Trophy name or guide word…" autocomplete="off"></label>
+    <label>Kind <select id="kindFilter"><option value="all">All kinds</option><option value="story">Story</option><option value="missable">Missable</option><option value="collectibles">Collectibles</option><option value="activities">Activities</option><option value="platinum">Platinum</option><option value="online">Online (0)</option></select></label>
+    <label>Grade <select id="gradeFilter"><option value="all">All grades</option><option value="platinum">Platinum</option><option value="gold">Gold</option><option value="silver">Silver</option><option value="bronze">Bronze</option></select></label>
+    <label>Status <select id="statusFilter"><option value="all">Earned + unearned</option><option value="earned">Earned only</option><option value="unearned">Unearned only</option></select></label>
+    <label>Sort <select id="sortBy"><option value="roadmap">Roadmap order</option><option value="psn">PSN order</option><option value="grade">Grade, then name</option><option value="name">Name A–Z</option></select></label>
+    <label class="check"><input id="disputedOnly" type="checkbox"> Disputed only</label>
+    <label class="check"><input id="unconfirmedOnly" type="checkbox"> Unconfirmed only</label>
+    <label class="spoiler"><input id="spoilerToggle" type="checkbox" checked> Spoiler shield: hide story trophies until earned</label>
+    <button id="exportBtn" type="button">Export progress</button>
+    <label class="import">Import progress <input id="importFile" type="file" accept="application/json"></label>
+  </div>
+  <p class="list-count" id="listCount"></p>
+  <div class="grid">
+    <div class="list-col" id="list" aria-label="Trophy checklist"></div>
+    <article class="detail-col" id="detail" aria-label="Trophy guide"></article>
+    <aside class="rail-col" id="sourcesRail" aria-label="Sources for this trophy"></aside>
+  </div>
+</section>
+
+<section id="view-roadmap" class="view" hidden>
+  <h2>Roadmap to the platinum</h2>
+  <p class="lede">Three stages, about 200 hours in all. Stage 1 is the story; stage 2 is the 100% completion checklist; stage 3 is the stranger strands and the last cleanups. Nothing on the checklist is missable — only the Chapter 1 meditation in stage 1 can be lost.</p>
+  <div id="roadmapBody"></div>
+  <h3>The 100% completion checklist (A Long Road)</h3>
+  <p class="lede">Unlocked after the story under Progress &gt; Stats &gt; 100% Completion. It is lenient — roughly 60% true completion — and progress made during the story already counts.</p>
+  <div id="checklistBody"></div>
+</section>
+
+<section id="view-missables" class="view" hidden>
+  <h2>Missables &amp; the watch list</h2>
+  <p class="lede">There is 1 possibly missable trophy and 7 questlines with chapter windows. Everything else stays available after the story in free-roam. Keep a manual save at the start and end of each chapter — there is no mission replay and 15 manual save slots.</p>
+  <div id="missablesBody"></div>
+</section>
+
+<section id="view-sources" class="view" hidden>
+  <h2>Sources</h2>
+  <p class="lede">Every guide cites the sources its facts come from by number. The official names, descriptions and grades come from the official list (sources 5 and 6). Guide text is this entry&rsquo;s own words — sources are cited, never copied. All sources read 20 November 2026.</p>
+  <ol class="source-list" id="sourcesBody"></ol>
+</section>
+
+<footer>
+  <p>Leonida Platinum Log — a free, open-source, offline GTA VI trophy guide and tracker. Works with the network off; progress is saved only in this browser (localStorage) and can be exported and imported. No Rockstar Games logo, artwork or game screenshots. Trophy names, descriptions and grades are PlayStation&rsquo;s official list. Guide text is our own words, written 20 November 2026.</p>
+</footer>
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
